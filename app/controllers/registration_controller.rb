@@ -5,10 +5,14 @@ class RegistrationController < ApplicationController
 
     def create
         @user = User.new(user_params)
+        puts user_params
         if @user.save
+            puts "here in save block "
             redirect_to root_path, notice: "Successfully created account"
         else
-            render :new
+            puts "not working"
+            # render :new
+            redirect_to sign_up_path, alert: "sdfsdfsdfds"
         end
         # render plain: params[:user]
         #render plain: params[:user][:email]
