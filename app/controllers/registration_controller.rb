@@ -11,8 +11,8 @@ class RegistrationController < ApplicationController
             redirect_to root_path, notice: "Successfully created account"
         else
             puts "not working"
-            # render :new
-            redirect_to sign_up_path, alert: "Something went wrong! try again"
+            render :new, status: :unprocessable_entity
+            # redirect_to sign_up_path, alert: "Something went wrong! try again"
         end
         # render plain: params[:user]
         #render plain: params[:user][:email]
