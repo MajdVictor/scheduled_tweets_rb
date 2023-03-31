@@ -12,7 +12,7 @@ class RegistrationController < ApplicationController
         else
             puts "not working"
             # render :new
-            redirect_to sign_up_path, alert: "sdfsdfsdfds"
+            redirect_to sign_up_path, alert: "Something went wrong! try again"
         end
         # render plain: params[:user]
         #render plain: params[:user][:email]
